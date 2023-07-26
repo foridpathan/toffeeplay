@@ -1,3 +1,4 @@
+import { getRandomRgbColor, rgbDataURL } from "@/core/helpers/imageBlur";
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillStar } from "react-icons/ai";
@@ -28,6 +29,8 @@ export const Card1 = ({ movie, className }: Props) => {
             alt={
               movie?.primaryImage?.caption?.plainText || movie.titleText.text
             }
+            placeholder="blur"
+            blurDataURL={rgbDataURL(...getRandomRgbColor())}
             fill
           />
         </>
@@ -63,6 +66,8 @@ export const Card2 = ({ movie }: Props) => {
           <Image
             src={movie?.primaryImage?.url || defaultImage}
             fill
+            placeholder="blur"
+            blurDataURL={rgbDataURL(...getRandomRgbColor())}
             alt={
               movie?.primaryImage?.caption?.plainText || movie.titleText.text
             }

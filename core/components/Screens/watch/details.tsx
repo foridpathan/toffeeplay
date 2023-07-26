@@ -1,3 +1,4 @@
+import { getRandomRgbColor, rgbDataURL } from "@/core/helpers/imageBlur";
 import Image from "next/image";
 import { BiDownload } from "react-icons/bi";
 import { BsClock, BsShareFill } from "react-icons/bs";
@@ -5,7 +6,6 @@ import { FaPlay, FaRegCalendarAlt } from "react-icons/fa";
 import { MovieProps } from "../../movie/type";
 
 const MovieDetails = ({ movie }: { movie: MovieProps }) => {
-  console.log(movie);
   return (
     <div className="w-full xl:h-screen relative text-white">
       <Image
@@ -25,6 +25,8 @@ const MovieDetails = ({ movie }: { movie: MovieProps }) => {
                 movie?.primaryImage?.caption?.plainText ||
                 movie?.titleText?.text
               }
+              placeholder="blur"
+              blurDataURL={rgbDataURL(...getRandomRgbColor())}
               className="w-full h-full object-cover"
             />
           </div>
