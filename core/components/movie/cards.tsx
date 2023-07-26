@@ -1,4 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
+import { AiFillStar } from "react-icons/ai";
+import { BsFillPlayFill } from "react-icons/bs";
+import { RxDotFilled } from "react-icons/rx";
+import { twMerge } from "tailwind-merge";
 import defaultImage from "../../../public/assets/images/default.jpg";
 import { MovieProps } from "./type";
 
@@ -8,18 +13,41 @@ type Props = {
   position?: number;
 };
 
-export const Card1 = ({ movie, position }: Props) => {
+export const Card1 = ({ movie, className }: Props) => {
   return (
-    <div className="rounded-lg relative shadow-lg mx-3">
-      <Image
-        src={movie?.primaryImage?.url || defaultImage}
-        width={movie?.primaryImage?.width}
-        height={movie?.primaryImage?.height}
-        alt={movie?.titleText?.text}
-        className="rounded"
-      />
-      <div className="absolute left-0 bottom-0 text-9xl font-bold text-stroke text-gray-500 opacity-90 leading-10 mb-8 -ml-8">
-        {position}
+    <div
+      className={twMerge(
+        `rounded-lg relative shadow-lg mx-3 h-full overflow-hidden border border-transparent bg-main 
+    hover:shadow-2xl hover:border-red-800 group/card-hover`,
+        className
+      )}>
+      <Link href={`/watch/${movie.id}`} className="relative rounded h-72 block">
+        <>
+          <Image
+            src={movie?.primaryImage?.url || defaultImage}
+            alt={
+              movie?.primaryImage?.caption?.plainText || movie.titleText.text
+            }
+            fill
+          />
+        </>
+      </Link>
+      <div className="p-2">
+        <Link href={`/watch/${movie.id}`}>
+          <h3 className="text-lg truncate text-white hover:text-rose-700">
+            {movie.titleText.text}
+          </h3>
+        </Link>
+        <div className="flex text-sm items-center justify-between text-gray-500">
+          <div className="flex items-center">
+            <p>{movie.releaseYear.year} </p>
+            <RxDotFilled />
+            <p>{movie?.runtime?.seconds / 60} min </p>
+          </div>
+          <div className="flex items-center">
+            <AiFillStar /> <p>{movie?.ratingsSummary?.aggregateRating} </p>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -28,13 +56,27 @@ export const Card1 = ({ movie, position }: Props) => {
 export const Card2 = ({ movie }: Props) => {
   return (
     <div className="rounded-lg relative shadow-lg mx-1 group/image-card overflow-hidden">
-      <Image
-        src={movie?.primaryImage?.url || defaultImage}
-        width={movie?.primaryImage?.width}
-        height={movie?.primaryImage?.height}
-        alt={movie?.titleText?.text}
-        className="transition-all ease-in-out delay-75 group-hover/image-card:scale-125 group-hover/image-card:relative group-hover/image-card:z-10"
-      />
+      <div
+        className="relative rounded h-72 transition flex items-center justify-center
+        group-hover/image-card:after:block group-hover/image-card:after:absolute group-hover/image-card:after:w-full group-hover/image-card:after:h-full group-hover/image-card:after:bg-slate-900 group-hover/image-card:after:bg-opacity-50">
+        <>
+          <Image
+            src={movie?.primaryImage?.url || defaultImage}
+            fill
+            alt={
+              movie?.primaryImage?.caption?.plainText || movie.titleText.text
+            }
+            className="transition-all ease-in-out delay-75 group-hover/image-card:scale-125"
+          />
+        </>
+        <div className="z-10 relative transition delay-75 scale-0 group-hover/image-card:scale-100">
+          <Link
+            href={`/watch/${movie.id}`}
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-red-700">
+            <BsFillPlayFill className="fill-white w-8 h-8" />
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

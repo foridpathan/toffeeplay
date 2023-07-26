@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
 import Slider from "react-slick";
-import img1 from "../../../public/assets/images/slider/1.jpg";
-import img2 from "../../../public/assets/images/slider/2.jpg";
-import img3 from "../../../public/assets/images/slider/3.jpg";
-import img4 from "../../../public/assets/images/slider/4.jpg";
-import img5 from "../../../public/assets/images/slider/5.jpg";
+import img1 from "../../../../../public/assets/images/slider/1.jpg";
+import img2 from "../../../../../public/assets/images/slider/2.jpg";
+import img3 from "../../../../../public/assets/images/slider/3.jpg";
+import img4 from "../../../../../public/assets/images/slider/4.jpg";
+import img5 from "../../../../../public/assets/images/slider/5.jpg";
 
 const SliderData = [
   {

@@ -1,9 +1,9 @@
 import { store } from "@/core/redux";
 import { movieApi } from "@/core/redux/api/movies";
-import MovieSection from "../movie";
+import MovieSection from "../../../movie";
 
 export default async function AnimationMovies() {
-  const param = "?limit=20&genre=Animation";
+  const param = "?limit=20&genre=Animation&info=base_info&year=2023";
   await store.dispatch(movieApi.endpoints.getMovies.initiate(param));
   const resData: any = store.getState().api.queries[`getMovies("${param}")`];
 

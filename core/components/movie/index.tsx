@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { FC } from "react";
 import Slider from "react-slick";
 import { Card1, Card2, Card3, Card4 } from "./cards";
@@ -54,12 +53,12 @@ const MovieSection: FC<Props> = ({ title, style = "one", data }) => {
       <Slider {...settings}>
         {data?.length > 0 &&
           data.map((movie, i) => (
-            <Link key={i} href="/">
-              {style === "one" && <Card1 movie={movie} position={i + 1} />}
+            <div key={i}>
+              {style === "one" && <Card1 movie={movie} />}
               {style === "two" && <Card2 movie={movie} />}
               {style === "three" && <Card3 movie={movie} />}
               {style === "three" && <Card4 movie={movie} />}
-            </Link>
+            </div>
           ))}
       </Slider>
     </div>

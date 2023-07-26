@@ -20,8 +20,8 @@ const Navbar = () => {
       },
       {
         label: "Contact Us",
-        href: "/contact-us",
-        active: pathname === "/contact-us",
+        href: "#",
+        active: false,
       },
     ],
     [pathname]

@@ -9,5 +9,10 @@ export const movieApi = apiSlice.injectEndpoints({
         url: `titles/${param}`,
       }),
     }),
+    getMovie: builder.query<any, string>({
+      query: (id) => ({
+        url: `titles/${id}`,
+      }),
+    }),
   }),
 });

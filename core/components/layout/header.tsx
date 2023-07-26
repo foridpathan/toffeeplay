@@ -9,7 +9,7 @@ import Navbar from "./navbar";
 const Header = () => {
   return (
     <div className="bg-main shadow sticky top-0 z-20">
-      <div className="mx-auto py-4 px-6 lg:px-8 max-w-screen-2xl lg:grid gap-10 grid-cols-7 justify-between items-center">
+      <div className="container mx-auto py-4 px-6 lg:px-8 lg:grid gap-10 grid-cols-7 justify-between items-center">
         <div className="col-span-1 lg:block hidden">
           <Link href="/">
             <Image src={logo} alt="Toffee" />

@@ -2,10 +2,10 @@ import Loading from "@/app/loading";
 import { store } from "@/core/redux";
 import { movieApi } from "@/core/redux/api/movies";
 import { Suspense } from "react";
-import MovieSection from "../movie";
+import MovieSection from "../../../movie";
 
 export default async function AdventureMovies() {
-  const param = "?limit=20&genre=Adventure";
+  const param = "?limit=20&genre=Adventure&info=base_info&year=2023";
   await store.dispatch(movieApi.endpoints.getMovies.initiate(param));
   const resData: any = store.getState().api.queries[`getMovies("${param}")`];
 

@@ -1,6 +1,6 @@
 import { store } from "@/core/redux";
 import { genreApi } from "@/core/redux/api/genres";
-import IconCard from "../movie/iconCard";
+import IconCard from "../../../movie/iconCard";
 
 export default async function Genres() {
   await store.dispatch(genreApi.endpoints.getGenres.initiate(undefined));
