@@ -16,12 +16,17 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.slick-next {
+  right: 25px;
+}
+.slick-prev {
+  left: 25px;
+}
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}
+
+.slider-grid .slick-list {
+  overflow: inherit !important;
 }

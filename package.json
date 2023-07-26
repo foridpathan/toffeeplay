@@ -6,9 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "e2e": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e\"",
+    "e2e:headless": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e\"",
+    "component": "cypress open --component",
+    "component:headless": "cypress run --component",
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "@types/node": "20.4.4",
     "@types/react": "18.2.16",
     "@types/react-dom": "18.2.7",
@@ -19,7 +25,17 @@
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-redux": "^8.1.1",
+    "react-slick": "^0.29.0",
+    "redux": "^4.2.1",
+    "slick-carousel": "^1.8.1",
+    "tailwind-merge": "^1.14.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@types/react-slick": "^0.23.10",
+    "cypress": "^12.17.2"
   }
 }
