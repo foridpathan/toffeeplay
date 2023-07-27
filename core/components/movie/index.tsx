@@ -14,8 +14,8 @@ const MovieSection: FC<Props> = ({ title, style = "one", data }) => {
   var settings = {
     dots: false,
     infinite: true,
-    pauseOnHover: false,
-    autoplay: true,
+    // pauseOnHover: false,
+    // autoplay: true,
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 6,
