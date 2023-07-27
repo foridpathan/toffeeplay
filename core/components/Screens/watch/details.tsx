@@ -15,8 +15,8 @@ const MovieDetails = ({ movie }: { movie: MovieProps }) => {
         className="w-full hidden xl:inline-block h-full object-cover"
       />
       <div className="xl:bg-main bg-dry flex-colo xl:bg-opacity-90 xl:absolute top-0 left-0 right-0 bottom-0">
-        <div className="container px-3 mx-auto 2xl:px-32 xl:grid grid-cols-3 flex-colo py-10 lg:py-20 gap-8">
-          <div className="xl:col-span-1 w-full xl:order-none order-last h-header bg-dry border border-gray-800 rounded-lg overflow-hidden">
+        <div className="container px-3 mx-auto 2xl:px-32 lg:grid grid-cols-3 flex-colo py-10 lg:py-20 gap-8">
+          <div className="lg:col-span-1 w-full lg:order-none order-last h-header bg-dry border border-gray-800 rounded-lg overflow-hidden">
             <Image
               src={movie?.primaryImage?.url}
               width={movie?.primaryImage?.width}
@@ -35,7 +35,7 @@ const MovieDetails = ({ movie }: { movie: MovieProps }) => {
               <h1 className="xl:text-4xl capitalize font-sans text-2xl font-bold">
                 {movie?.titleText?.text}
               </h1>
-              <div className="flex items-center gap-4 font-medium text-dryGray">
+              <div className="flex items-center flex-col xl:flex-row gap-4 font-medium text-dryGray">
                 <div className="flex-colo bg-subMain text-xs px-2 py-1">
                   {movie?.titleType?.text}
                 </div>
@@ -62,7 +62,7 @@ const MovieDetails = ({ movie }: { movie: MovieProps }) => {
                   </div>
                 )}
               </div>
-              <p className="text-white text-sm leading-7">
+              <p className="text-white text-sm leading-7" data-cy="description">
                 {movie?.plot?.plotText?.plainText}
               </p>
               <div className="flex items-center justify-between gap-4 p-6 bg-main border border-gray-800 rounded-lg">

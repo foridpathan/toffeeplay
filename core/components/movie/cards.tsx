@@ -11,7 +11,6 @@ import { MovieProps } from "./type";
 type Props = {
   movie: MovieProps;
   className?: string;
-  position?: number;
 };
 
 export const Card1 = ({ movie, className }: Props) => {
@@ -29,6 +28,7 @@ export const Card1 = ({ movie, className }: Props) => {
         className="relative rounded h-72 block">
         <>
           <Image
+            data-cy="poster"
             src={movie?.primaryImage?.url || defaultImage}
             alt={
               movie?.primaryImage?.caption?.plainText || movie.titleText.text
@@ -57,12 +57,13 @@ export const Card1 = ({ movie, className }: Props) => {
         </Link>
         <div className="flex text-sm items-center justify-between text-gray-500">
           <div className="flex items-center">
-            <p>{movie.releaseYear.year} </p>
+            <p data-cy="year">{movie.releaseYear.year} </p>
             <RxDotFilled />
-            <p>{movie?.runtime?.seconds / 60} min </p>
+            <p data-cy="runtime">{movie?.runtime?.seconds / 60} min </p>
           </div>
           <div className="flex items-center">
-            <AiFillStar /> <p>{movie?.ratingsSummary?.aggregateRating} </p>
+            <AiFillStar />{" "}
+            <p data-cy="rating">{movie?.ratingsSummary?.aggregateRating} </p>
           </div>
         </div>
       </div>
@@ -106,33 +107,6 @@ export const Card2 = ({ movie }: Props) => {
           </Link>
         </div>
       </div>
-    </div>
-  );
-};
-
-export const Card3 = ({ movie }: Props) => {
-  return (
-    <div className=" relative mx-1 group/image-card">
-      <Image
-        src={movie?.primaryImage?.url || defaultImage}
-        width={movie?.primaryImage?.width}
-        height={movie?.primaryImage?.height}
-        alt={movie?.titleText?.text}
-        className="transition-all shadow-lg ease-in-out delay-75 group-hover/image-card:scale-105 group-hover/image-card:relative 
-          group-hover/image-card:z-10 group-hover/image-card:border group-hover/image-card:border-white rounded-full"
-      />
-    </div>
-  );
-};
-export const Card4 = ({ movie, className = "" }: Props) => {
-  return (
-    <div className={`rounded-lg relative shadow-lg mx-3 ${className}`}>
-      <Image
-        src={movie?.primaryImage?.url || defaultImage}
-        width={movie?.primaryImage?.width}
-        height={movie?.primaryImage?.height}
-        alt={movie?.titleText?.text}
-      />
     </div>
   );
 };

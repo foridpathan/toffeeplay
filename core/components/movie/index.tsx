@@ -1,13 +1,13 @@
 "use client";
 import { FC } from "react";
 import Slider from "react-slick";
-import { Card1, Card2, Card3, Card4 } from "./cards";
+import { Card1, Card2 } from "./cards";
 import { MovieProps } from "./type";
 
 type Props = {
   data: MovieProps[];
   title: string;
-  style: "one" | "two" | "three" | "four";
+  style: "one" | "two";
 };
 
 const MovieSection: FC<Props> = ({ title, style = "one", data }) => {
@@ -56,8 +56,6 @@ const MovieSection: FC<Props> = ({ title, style = "one", data }) => {
             <div key={i}>
               {style === "one" && <Card1 movie={movie} />}
               {style === "two" && <Card2 movie={movie} />}
-              {style === "three" && <Card3 movie={movie} />}
-              {style === "three" && <Card4 movie={movie} />}
             </div>
           ))}
       </Slider>

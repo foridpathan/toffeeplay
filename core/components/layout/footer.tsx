@@ -164,7 +164,6 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <MobileNav />
     </footer>
   );
 }
