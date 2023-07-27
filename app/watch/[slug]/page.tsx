@@ -13,11 +13,11 @@ export default async function MovieDetailsPage({
   const resData: any = store.getState().api.queries[`getMovie("${param}")`];
 
   return (
-    <>
+    <div>
       <MovieDetails movie={resData?.data?.results} />
       <div className="container mx-auto min-h-screen px-2 my-6">
         <MovieReview />
       </div>
-    </>
+    </div>
   );
 }

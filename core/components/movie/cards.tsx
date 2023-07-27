@@ -22,7 +22,11 @@ export const Card1 = ({ movie, className }: Props) => {
     hover:shadow-2xl hover:border-red-800 group/card-hover`,
         className
       )}>
-      <Link href={`/watch/${movie.id}`} className="relative rounded h-72 block">
+      <Link
+        href={`/watch/${movie.id}`}
+        scroll
+        shallow
+        className="relative rounded h-72 block">
         <>
           <Image
             src={movie?.primaryImage?.url || defaultImage}
@@ -32,11 +36,13 @@ export const Card1 = ({ movie, className }: Props) => {
             placeholder="blur"
             blurDataURL={rgbDataURL(...getRandomRgbColor())}
             fill
+            sizes={`(max-width: 768px) ${movie?.primaryImage?.width}px, (max-width: 1200px) ${movie?.primaryImage?.width}px, ${movie?.primaryImage?.width}px`}
+            loading="lazy"
           />
         </>
       </Link>
       <div className="p-2">
-        <Link href={`/watch/${movie.id}`}>
+        <Link href={`/watch/${movie.id}`} scroll shallow>
           <h3 className="text-lg truncate text-white hover:text-rose-700">
             {movie.titleText.text}
           </h3>
@@ -67,6 +73,8 @@ export const Card2 = ({ movie }: Props) => {
             src={movie?.primaryImage?.url || defaultImage}
             fill
             placeholder="blur"
+            sizes={`(max-width: 768px) ${movie?.primaryImage?.width}px, (max-width: 1200px) ${movie?.primaryImage?.width}px, ${movie?.primaryImage?.width}px`}
+            loading="lazy"
             blurDataURL={rgbDataURL(...getRandomRgbColor())}
             alt={
               movie?.primaryImage?.caption?.plainText || movie.titleText.text
