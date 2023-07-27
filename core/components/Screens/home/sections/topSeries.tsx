@@ -17,7 +17,9 @@ export default async function TopSeries() {
       </h1>
 
       <Suspense fallback={<Loading />}>
-        <div className="grid grid-cols-2 xs:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6  gap-4">
+        <div
+          className="grid grid-cols-2 xs:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4"
+          id="top-movies">
           {resData?.data &&
             resData?.data?.results?.length > 0 &&
             resData?.data?.results?.map((movie: MovieProps, i: number) => (

@@ -51,7 +51,9 @@ export const Card1 = ({ movie, className }: Props) => {
       </Link>
       <div className="p-2">
         <Link href={`/watch/${movie.id}`} scroll shallow>
-          <h3 className="text-lg truncate text-white hover:text-rose-700">
+          <h3
+            data-cy="title"
+            className="text-lg truncate text-white hover:text-rose-700">
             {movie.titleText.text}
           </h3>
         </Link>
