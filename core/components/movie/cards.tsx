@@ -19,14 +19,14 @@ export const Card1 = ({ movie, className }: Props) => {
     <div
       className={twMerge(
         `rounded-lg relative shadow-lg mx-3 h-full overflow-hidden border border-transparent bg-main 
-    hover:shadow-2xl hover:border-red-800 group/card-hover flex justify-between flex-col`,
+    hover:shadow-2xl hover:border-red-800 group/card-hover`,
         className
       )}>
       <Link
         href={`/watch/${movie.id}`}
         scroll
         shallow
-        className="relative rounded block">
+        className="relative rounded h-72 block">
         <>
           <Image
             src={movie?.primaryImage?.url || defaultImage}
@@ -35,10 +35,16 @@ export const Card1 = ({ movie, className }: Props) => {
             }
             placeholder="blur"
             blurDataURL={rgbDataURL(...getRandomRgbColor())}
-            // fill
-            // sizes={`(max-width: 768px) ${movie?.primaryImage?.width}px, (max-width: 1200px) ${movie?.primaryImage?.width}px, ${movie?.primaryImage?.width}px`}
-            width={movie?.primaryImage?.width}
-            height={movie?.primaryImage?.height}
+            fill
+            sizes={`(max-width: 768px) 450px, (max-width: 1200px) ${
+              movie?.primaryImage?.width > 900
+                ? 780
+                : movie?.primaryImage?.width
+            }px, ${
+              movie?.primaryImage?.width > 1600
+                ? 1024
+                : movie?.primaryImage?.width
+            }px`}
             loading="lazy"
           />
         </>
@@ -73,11 +79,17 @@ export const Card2 = ({ movie }: Props) => {
         <>
           <Image
             src={movie?.primaryImage?.url || defaultImage}
-            // fill
+            fill
             placeholder="blur"
-            // sizes={`(max-width: 768px) ${movie?.primaryImage?.width}px, (max-width: 1200px) ${movie?.primaryImage?.width}px, ${movie?.primaryImage?.width}px`}
-            width={movie?.primaryImage?.width}
-            height={movie?.primaryImage?.height}
+            sizes={`(max-width: 768px) 450px, (max-width: 1200px) ${
+              movie?.primaryImage?.width > 900
+                ? 780
+                : movie?.primaryImage?.width
+            }px, ${
+              movie?.primaryImage?.width > 1600
+                ? 1024
+                : movie?.primaryImage?.width
+            }px`}
             loading="lazy"
             blurDataURL={rgbDataURL(...getRandomRgbColor())}
             alt={
@@ -86,7 +98,7 @@ export const Card2 = ({ movie }: Props) => {
             className="transition-all ease-in-out delay-75 group-hover/image-card:scale-125"
           />
         </>
-        <div className="z-10 absolute transition delay-75 scale-0 group-hover/image-card:scale-100">
+        <div className="z-10 relative transition delay-75 scale-0 group-hover/image-card:scale-100">
           <Link
             href={`/watch/${movie.id}`}
             className="w-12 h-12 flex items-center justify-center rounded-full bg-red-700">
