@@ -8,7 +8,6 @@
     "start": "next start",
     "e2e": "cypress open",
     "component": "cypress open --component",
-    "component:headless": "cypress run --component",
     "lint": "next lint"
   },
   "dependencies": {

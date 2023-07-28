@@ -3,6 +3,7 @@ import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import { BsCollectionPlay } from "react-icons/bs";
 import { CgUser } from "react-icons/cg";
+import { HiSearch } from "react-icons/hi";
 import { IoHomeOutline } from "react-icons/io5";
 import { PiTelevisionSimpleBold } from "react-icons/pi";
 
@@ -58,6 +59,39 @@ export const useMobileRoute = () => {
         href: "/login",
         icon: CgUser,
         active: pathname === "/login",
+      },
+    ],
+    [pathname]
+  );
+  return routes;
+};
+export const useTvRoute = () => {
+  const pathname = usePathname();
+  const routes = useMemo(
+    () => [
+      {
+        label: "Home",
+        href: "/",
+        icon: IoHomeOutline,
+        active: pathname === "/",
+      },
+      {
+        label: "Search",
+        href: "/search",
+        icon: HiSearch,
+        active: pathname === "/login",
+      },
+      {
+        label: "Movies",
+        href: "/movies",
+        active: pathname === "/movies",
+        icon: BsCollectionPlay,
+      },
+      {
+        label: "Live TV",
+        href: "/live-tv",
+        icon: PiTelevisionSimpleBold,
+        active: pathname === "/live-tv",
       },
     ],
     [pathname]

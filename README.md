@@ -1,8 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a `OOT application` developed using NextJS 13.4 and using `RapidAPI` open API
 
 ## Getting Started
 
-First, run the development server:
+First, Install Dependencies run the commend:
+
+```bash
+npm i
+# or
+yarn add
+# or
+pnpm i
+```
+
+Now Run this command in development server
 
 ```bash
 npm run dev
@@ -14,21 +24,43 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Here is test case command
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+# End To End test
+npm run e2e
+# or
+yarn e2e
 
-## Learn More
+# Component based test
+npm run component
+# or
+yarn component
+```
 
-To learn more about Next.js, take a look at the following resources:
+This application comfortable with all devices like **All TVs**, **Desktop**, **Tablets**, **All Mobiles**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Here is some screenshot
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Television
 
-## Deploy on Vercel
+![Television](screenshot/tv.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Desktop
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Desktop](screenshot/laptop.png)
+
+### Tablet
+
+![Tablet](screenshot/tablet-1.png) ![Television](screenshot/tablet-2.png) ![Television](screenshot/tablet-3.png)
+
+### Mobile
+
+![Mobile](screenshot/mobile-1.png)![Mobile](screenshot/mobile-2.png)![Mobile](screenshot/mobile-3.png)
+
+### Testing
+
+**E2E Testing**
+![E2E Test](screenshot/e2e.png)
+**Unit Testing**
+![E2E Test](screenshot/comp.png)
