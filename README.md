@@ -64,3 +64,7 @@ This application comfortable with all devices like **All TVs**, **Desktop**, **T
 ![E2E Test](screenshot/e2e.png)
 **Unit Testing**
 ![E2E Test](screenshot/comp.png)
+
+### Component Hierarchy
+
+![Hierarchy](screenshot/hierarchy.png)
