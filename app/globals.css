@@ -16,11 +16,26 @@
   }
 }
 
+@layer components {
+  /* Targets all scrollbars */
+  ::-webkit-scrollbar {
+    @apply w-0.5;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-600;
+  }
+}
+
 .slick-next {
-  right: 25px;
+  right: 25px !important;
 }
 .slick-prev {
-  left: 25px;
+  left: 25px !important;
 }
 .slick-prev,
 .slick-next {

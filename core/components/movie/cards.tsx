@@ -103,6 +103,7 @@ export const Card2 = ({ movie }: Props) => {
         </>
         <div className="z-10 relative transition delay-75 scale-0 group-hover/image-card:scale-100">
           <Link
+            prefetch
             href={`/watch/${movie.id}`}
             className="w-12 h-12 flex items-center justify-center rounded-full bg-red-700">
             <BsFillPlayFill className="fill-white w-8 h-8" />

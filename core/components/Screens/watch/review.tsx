@@ -52,7 +52,103 @@ const MovieReview = () => {
         </div>
         <div className="col-span-3 flex flex-col gap-6">
           <h3 className="text-xl text-white font-semibold">Reviews (1)</h3>
-          <div className="w-full flex flex-col bg-main gap-6 rounded-lg md:p-12 p-6 h-header overflow-y-scroll">
+          <div className="w-full flex flex-col bg-main gap-6 rounded-lg md:p-12 p-6 h-header overflow-y-auto">
+            <div className="md:grid flex flex-col w-full grid-cols-12 gap-6 bg-dry p-4 border border-gray-800 rounded-lg">
+              <div className="col-span-2 bg-main hidden md:block">
+                <img
+                  src="/assets/images/default.jpg"
+                  alt="Tom Cruise"
+                  className="w-full h-24 rounded-lg object-cover"
+                />
+              </div>
+              <div className="col-span-7 flex flex-col gap-2">
+                <h2 className="text-white">Tom Cruise</h2>
+                <p className="text-xs leading-6 font-medium text-white">
+                  Lorem ipsum dolor sit amet, consecetur adipiscing elseddo
+                  eiusmod There are many variations of passages of lorem Ipsum
+                  available, but the majority have suffered alteration.
+                </p>
+              </div>
+              <div className="col-span-3 flex items-center justify-center border-l border-border text-xs gap-1 text-star">
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+              </div>
+            </div>
+            <div className="md:grid flex flex-col w-full grid-cols-12 gap-6 bg-dry p-4 border border-gray-800 rounded-lg">
+              <div className="col-span-2 bg-main hidden md:block">
+                <img
+                  src="/assets/images/default.jpg"
+                  alt="Tom Cruise"
+                  className="w-full h-24 rounded-lg object-cover"
+                />
+              </div>
+              <div className="col-span-7 flex flex-col gap-2">
+                <h2 className="text-white">Tom Cruise</h2>
+                <p className="text-xs leading-6 font-medium text-white">
+                  Lorem ipsum dolor sit amet, consecetur adipiscing elseddo
+                  eiusmod There are many variations of passages of lorem Ipsum
+                  available, but the majority have suffered alteration.
+                </p>
+              </div>
+              <div className="col-span-3 flex items-center justify-center border-l border-border text-xs gap-1 text-star">
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+              </div>
+            </div>
+            <div className="md:grid flex flex-col w-full grid-cols-12 gap-6 bg-dry p-4 border border-gray-800 rounded-lg">
+              <div className="col-span-2 bg-main hidden md:block">
+                <img
+                  src="/assets/images/default.jpg"
+                  alt="Tom Cruise"
+                  className="w-full h-24 rounded-lg object-cover"
+                />
+              </div>
+              <div className="col-span-7 flex flex-col gap-2">
+                <h2 className="text-white">Tom Cruise</h2>
+                <p className="text-xs leading-6 font-medium text-white">
+                  Lorem ipsum dolor sit amet, consecetur adipiscing elseddo
+                  eiusmod There are many variations of passages of lorem Ipsum
+                  available, but the majority have suffered alteration.
+                </p>
+              </div>
+              <div className="col-span-3 flex items-center justify-center border-l border-border text-xs gap-1 text-star">
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+              </div>
+            </div>
+            <div className="md:grid flex flex-col w-full grid-cols-12 gap-6 bg-dry p-4 border border-gray-800 rounded-lg">
+              <div className="col-span-2 bg-main hidden md:block">
+                <img
+                  src="/assets/images/default.jpg"
+                  alt="Tom Cruise"
+                  className="w-full h-24 rounded-lg object-cover"
+                />
+              </div>
+              <div className="col-span-7 flex flex-col gap-2">
+                <h2 className="text-white">Tom Cruise</h2>
+                <p className="text-xs leading-6 font-medium text-white">
+                  Lorem ipsum dolor sit amet, consecetur adipiscing elseddo
+                  eiusmod There are many variations of passages of lorem Ipsum
+                  available, but the majority have suffered alteration.
+                </p>
+              </div>
+              <div className="col-span-3 flex items-center justify-center border-l border-border text-xs gap-1 text-star">
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+                <AiFillStar className="text-amber-500" />
+              </div>
+            </div>
             <div className="md:grid flex flex-col w-full grid-cols-12 gap-6 bg-dry p-4 border border-gray-800 rounded-lg">
               <div className="col-span-2 bg-main hidden md:block">
                 <img
